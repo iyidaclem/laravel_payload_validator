@@ -18,16 +18,16 @@ class ValidatorEngine extends Controller
                 foreach ($rules as $rule) {
                     switch ($rule) {
                         case "alpha":
-                            !self::isAlpha($value['value']) ? array_push($errors, "Must be alpha") : "";
+                            !self::isAlpha(isset($value['value'])?$value['value']:"") ? array_push($errors, "Must be alpha") : "";
                             break;
                         case "required":
-                            !self::isRequired($value['value']) ? array_push($errors, "Is Required") : "";
+                            !self::isRequired(isset($value['value'])?$value['value']:"") ? array_push($errors, "Is Required") : "";
                             break;
                         case "email":
-                            !self::isEmail($value['value']) ? array_push($errors, "Must be email") : "";
+                            !self::isEmail(isset($value['value'])?$value['value']:"") ? array_push($errors, "Must be email") : "";
                             break;
                         case "number":
-                            !self::isNumber($value['value']) ? array_push($errors, "Must be a number") : "";
+                            !self::isNumber(isset($value['value'])?$value['value']:"") ? array_push($errors, "Must be a number") : "";
                             break;
                         default:
                             break;

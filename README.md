@@ -44,5 +44,16 @@ Simple Laravel validtion engine for validating json payload based on a the suppl
 {"status" : true}
 
 - Failed
-Returns laravel standard validation error
+{
+    "message": "Must be alpha (and 1 more error)",
+    "errors": {
+        "first_name": [
+            "Must be alpha"
+        ],
+        "email": [
+            "Must be email"
+        ]
+    }
+}
+```
 
