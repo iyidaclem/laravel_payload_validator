@@ -17,6 +17,10 @@ Simple Laravel validtion engine for validating json payload based on a the suppl
 ```
 
 ## Sample payload
+
+# Format
+Send the payload as JSON
+
 ```
 {
     "first_name": {
